@@ -1,0 +1,320 @@
+/* Windows 98 Style Components */
+
+/* Base Windows 98 Button Styles */
+.win98-button {
+  background: #c0c0c0;
+  border: 2px outset #c0c0c0;
+  border-top-color: #ffffff;
+  border-left-color: #ffffff;
+  border-right-color: #808080;
+  border-bottom-color: #808080;
+  color: #000000;
+  font-family: 'MS Sans Serif', sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  padding: 4px 16px;
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+  transition: none;
+  outline: none;
+}
+
+.win98-button:hover {
+  background: #c0c0c0;
+}
+
+.win98-button:active,
+.win98-button.active {
+  border: 2px inset #c0c0c0;
+  border-top-color: #808080;
+  border-left-color: #808080;
+  border-right-color: #ffffff;
+  border-bottom-color: #ffffff;
+  padding: 5px 15px 3px 17px;
+}
+
+.win98-button:disabled {
+  color: #808080;
+  cursor: default;
+  background: #c0c0c0;
+}
+
+/* Primary Button (darker) */
+.win98-button-primary {
+  background: #008080;
+  border: 2px outset #008080;
+  border-top-color: #40c0c0;
+  border-left-color: #40c0c0;
+  border-right-color: #004040;
+  border-bottom-color: #004040;
+  color: #ffffff;
+}
+
+.win98-button-primary:active,
+.win98-button-primary.active {
+  border: 2px inset #008080;
+  border-top-color: #004040;
+  border-left-color: #004040;
+  border-right-color: #40c0c0;
+  border-bottom-color: #40c0c0;
+}
+
+/* Large Button Variant */
+.win98-button-large {
+  padding: 8px 24px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.win98-button-large:active,
+.win98-button-large.active {
+  padding: 9px 23px 7px 25px;
+}
+
+/* Input Fields */
+.win98-input {
+  background: #ffffff;
+  border: 2px inset #c0c0c0;
+  border-top-color: #808080;
+  border-left-color: #808080;
+  border-right-color: #ffffff;
+  border-bottom-color: #ffffff;
+  font-family: 'MS Sans Serif', sans-serif;
+  font-size: 11px;
+  color: #000000;
+  padding: 2px 4px;
+  outline: none;
+  transition: none;
+}
+
+.win98-input:focus {
+  background: #ffffff;
+  border-color: #000080;
+  border: 2px solid #000080;
+}
+
+.win98-input:disabled {
+  background: #c0c0c0;
+  color: #808080;
+}
+
+/* Text Area */
+.win98-textarea {
+  background: #ffffff;
+  border: 2px inset #c0c0c0;
+  border-top-color: #808080;
+  border-left-color: #808080;
+  border-right-color: #ffffff;
+  border-bottom-color: #ffffff;
+  font-family: 'MS Sans Serif', sans-serif;
+  font-size: 11px;
+  color: #000000;
+  padding: 4px;
+  outline: none;
+  resize: none;
+  transition: none;
+}
+
+.win98-textarea:focus {
+  background: #ffffff;
+  border: 2px solid #000080;
+}
+
+/* Checkbox */
+.win98-checkbox {
+  width: 13px;
+  height: 13px;
+  background: #ffffff;
+  border: 2px inset #c0c0c0;
+  border-top-color: #808080;
+  border-left-color: #808080;
+  border-right-color: #ffffff;
+  border-bottom-color: #ffffff;
+  appearance: none;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+}
+
+.win98-checkbox:checked {
+  background: #ffffff;
+}
+
+.win98-checkbox:checked::after {
+  content: '✓';
+  position: absolute;
+  top: -2px;
+  left: 1px;
+  font-size: 11px;
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Select Dropdown */
+.win98-select {
+  background: #ffffff;
+  border: 2px inset #c0c0c0;
+  border-top-color: #808080;
+  border-left-color: #808080;
+  border-right-color: #ffffff;
+  border-bottom-color: #ffffff;
+  font-family: 'MS Sans Serif', sans-serif;
+  font-size: 11px;
+  color: #000000;
+  padding: 2px 20px 2px 4px;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%23000000" d="M2 0L0 2h4zm0 5L0 3h4z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 4px center;
+  background-size: 8px;
+}
+
+.win98-select:focus {
+  border: 2px solid #000080;
+}
+
+/* Loading Button */
+.win98-button.loading {
+  color: #808080;
+}
+
+.win98-button.loading::after {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-left: 8px;
+  border: 1px solid #808080;
+  border-top: 1px solid #000000;
+  border-radius: 50%;
+  animation: win98-spin 1s linear infinite;
+}
+
+@keyframes win98-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error States */
+.win98-input.error {
+  background: #ffcccc;
+  border-color: #800000;
+}
+
+.win98-error-message {
+  color: #800000;
+  font-family: 'MS Sans Serif', sans-serif;
+  font-size: 10px;
+  margin-top: 2px;
+  display: block;
+}
+
+/* Success Button */
+.win98-button-success {
+  background: #008000;
+  border: 2px outset #008000;
+  border-top-color: #40ff40;
+  border-left-color: #40ff40;
+  border-right-color: #004000;
+  border-bottom-color: #004000;
+  color: #ffffff;
+}
+
+.win98-button-success:active,
+.win98-button-success.active {
+  border: 2px inset #008000;
+  border-top-color: #004000;
+  border-left-color: #004000;
+  border-right-color: #40ff40;
+  border-bottom-color: #40ff40;
+}
+
+/* Warning Button */
+.win98-button-warning {
+  background: #ffff00;
+  border: 2px outset #ffff00;
+  border-top-color: #ffffff;
+  border-left-color: #ffffff;
+  border-right-color: #c0c000;
+  border-bottom-color: #c0c000;
+  color: #000000;
+}
+
+.win98-button-warning:active,
+.win98-button-warning.active {
+  border: 2px inset #ffff00;
+  border-top-color: #c0c000;
+  border-left-color: #c0c000;
+  border-right-color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+/* Quantity Controls */
+.win98-quantity-btn {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.win98-quantity-input {
+  width: 40px;
+  height: 20px;
+  text-align: center;
+  font-size: 11px;
+  padding: 1px 2px;
+}
+
+/* Form Groups */
+.win98-form-group {
+  margin-bottom: 12px;
+}
+
+.win98-form-group label {
+  display: block;
+  font-family: 'MS Sans Serif', sans-serif;
+  font-size: 11px;
+  color: #000000;
+  margin-bottom: 2px;
+  font-weight: normal;
+}
+
+/* Panel/Container */
+.win98-panel {
+  background: #c0c0c0;
+  border: 2px inset #c0c0c0;
+  border-top-color: #ffffff;
+  border-left-color: #ffffff;
+  border-right-color: #808080;
+  border-bottom-color: #808080;
+  padding: 8px;
+}
+
+.win98-panel-outset {
+  border: 2px outset #c0c0c0;
+  border-top-color: #ffffff;
+  border-left-color: #ffffff;
+  border-right-color: #808080;
+  border-bottom-color: #808080;
+}
+
+/* Close Button (X) */
+.win98-close-button {
+  width: 16px;
+  height: 14px;
+  padding: 0;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
