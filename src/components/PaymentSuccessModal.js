@@ -110,7 +110,7 @@ const PaymentSuccessModal = ({ isOpen, onClose, orderDetails }) => {
         </div>
 
         <div className="modal-footer">
-          <button className="win98-button win98-button-primary win98-button-large" onClick={onClose}>
+          <button className="retro-button retro-button-primary retro-button-large" onClick={onClose}>
             Continue Shopping
           </button>
         </div>

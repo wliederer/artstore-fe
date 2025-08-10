@@ -56,7 +56,7 @@ const ProductCard = ({ product, onProductClick }) => {
         ) : isLimitedStock ? (
           <div className="add-to-cart-only" onClick={(e) => e.stopPropagation()}>
             <button 
-              className="win98-button win98-button-primary"
+              className="retro-button retro-button-primary"
               onClick={() => onProductClick(product, 1)}
             >
               ADD TO CART - ${product.price}
@@ -65,7 +65,7 @@ const ProductCard = ({ product, onProductClick }) => {
         ) : (
           <div className="quantity-controls" onClick={(e) => e.stopPropagation()}>
             <button 
-              className="win98-button win98-quantity-btn" 
+              className="retro-button retro-quantity-btn" 
               onClick={decreaseQuantity}
               disabled={quantity <= 1}
             >
@@ -75,12 +75,12 @@ const ProductCard = ({ product, onProductClick }) => {
               type="number" 
               value={quantity} 
               onChange={handleQuantityChange}
-              className="win98-input win98-quantity-input"
+              className="retro-input retro-quantity-input"
               min="1"
               max={product.stockQuantity || 999}
             />
             <button 
-              className="win98-button win98-quantity-btn" 
+              className="retro-button retro-quantity-btn" 
               onClick={increaseQuantity}
               disabled={quantity >= (product.stockQuantity || 999)}
             >

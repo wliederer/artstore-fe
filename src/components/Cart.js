@@ -262,7 +262,7 @@ const Cart = forwardRef(({ cart, isOpen, onClose, onUpdateQuantity, onRemoveItem
       <div className="cart-sidebar">
         <div className="cart-header">
           <h2>Your Cart</h2>
-          <button className="win98-button win98-close-button" onClick={onClose}>×</button>
+          <button className="retro-button retro-close-button" onClick={onClose}>×</button>
         </div>
         
         <div className="cart-content">
@@ -280,7 +280,7 @@ const Cart = forwardRef(({ cart, isOpen, onClose, onUpdateQuantity, onRemoveItem
                         <p className="cart-item-price">${item.price}</p>
                         <div className="quantity-controls">
                           <button 
-                            className="win98-button win98-quantity-btn"
+                            className="retro-button retro-quantity-btn"
                             onClick={() => onUpdateQuantity(item.id, item.quantity - 1)}
                             disabled={item.quantity <= 1}
                           >
@@ -288,7 +288,7 @@ const Cart = forwardRef(({ cart, isOpen, onClose, onUpdateQuantity, onRemoveItem
                           </button>
                           <span>{item.quantity}</span>
                           <button 
-                            className="win98-button win98-quantity-btn"
+                            className="retro-button retro-quantity-btn"
                             onClick={() => onUpdateQuantity(item.id, item.quantity + 1)}
                             disabled={item.quantity >= (item.stockQuantity || 999)}
                             style={{
@@ -302,7 +302,7 @@ const Cart = forwardRef(({ cart, isOpen, onClose, onUpdateQuantity, onRemoveItem
                       <div className="cart-item-total">
                         <p>${(item.price * item.quantity).toFixed(2)}</p>
                         <button 
-                          className="win98-button"
+                          className="retro-button"
                           onClick={() => onRemoveItem(item.id)}
                         >
                           Remove
@@ -330,7 +330,7 @@ const Cart = forwardRef(({ cart, isOpen, onClose, onUpdateQuantity, onRemoveItem
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className={`win98-input ${errors.email ? 'error' : ''}`}
+                  className={`retro-input ${errors.email ? 'error' : ''}`}
                 />
                 {errors.email && <span className="error-message">{errors.email}</span>}
               </div>
@@ -343,7 +343,7 @@ const Cart = forwardRef(({ cart, isOpen, onClose, onUpdateQuantity, onRemoveItem
                     name="firstName"
                     value={formData.firstName}
                     onChange={handleInputChange}
-                    className={`win98-input ${errors.firstName ? 'error' : ''}`}
+                    className={`retro-input ${errors.firstName ? 'error' : ''}`}
                   />
                   {errors.firstName && <span className="error-message">{errors.firstName}</span>}
                 </div>
@@ -354,7 +354,7 @@ const Cart = forwardRef(({ cart, isOpen, onClose, onUpdateQuantity, onRemoveItem
                     name="lastName"
                     value={formData.lastName}
                     onChange={handleInputChange}
-                    className={`win98-input ${errors.lastName ? 'error' : ''}`}
+                    className={`retro-input ${errors.lastName ? 'error' : ''}`}
                   />
                   {errors.lastName && <span className="error-message">{errors.lastName}</span>}
                 </div>
@@ -368,7 +368,7 @@ const Cart = forwardRef(({ cart, isOpen, onClose, onUpdateQuantity, onRemoveItem
                   value={formData.phone}
                   onChange={handleInputChange}
                   placeholder="(555) 123-4567"
-                  className={`win98-input ${errors.phone ? 'error' : ''}`}
+                  className={`retro-input ${errors.phone ? 'error' : ''}`}
                 />
                 {errors.phone && <span className="error-message">{errors.phone}</span>}
               </div>
@@ -382,7 +382,7 @@ const Cart = forwardRef(({ cart, isOpen, onClose, onUpdateQuantity, onRemoveItem
                   name="address"
                   value={formData.address}
                   onChange={handleInputChange}
-                  className={`win98-input ${errors.address ? 'error' : ''}`}
+                  className={`retro-input ${errors.address ? 'error' : ''}`}
                 />
                 {errors.address && <span className="error-message">{errors.address}</span>}
               </div>
@@ -395,7 +395,7 @@ const Cart = forwardRef(({ cart, isOpen, onClose, onUpdateQuantity, onRemoveItem
                     name="city"
                     value={formData.city}
                     onChange={handleInputChange}
-                    className={`win98-input ${errors.city ? 'error' : ''}`}
+                    className={`retro-input ${errors.city ? 'error' : ''}`}
                   />
                   {errors.city && <span className="error-message">{errors.city}</span>}
                 </div>
@@ -406,7 +406,7 @@ const Cart = forwardRef(({ cart, isOpen, onClose, onUpdateQuantity, onRemoveItem
                     name="state"
                     value={formData.state}
                     onChange={handleInputChange}
-                    className={`win98-input ${errors.state ? 'error' : ''}`}
+                    className={`retro-input ${errors.state ? 'error' : ''}`}
                   />
                   {errors.state && <span className="error-message">{errors.state}</span>}
                 </div>
@@ -420,7 +420,7 @@ const Cart = forwardRef(({ cart, isOpen, onClose, onUpdateQuantity, onRemoveItem
                     name="zipCode"
                     value={formData.zipCode}
                     onChange={handleInputChange}
-                    className={`win98-input ${errors.zipCode ? 'error' : ''}`}
+                    className={`retro-input ${errors.zipCode ? 'error' : ''}`}
                   />
                   {errors.zipCode && <span className="error-message">{errors.zipCode}</span>}
                 </div>
@@ -431,7 +431,7 @@ const Cart = forwardRef(({ cart, isOpen, onClose, onUpdateQuantity, onRemoveItem
                     name="country"
                     value={formData.country}
                     onChange={handleInputChange}
-                    className={`win98-input ${errors.country ? 'error' : ''}`}
+                    className={`retro-input ${errors.country ? 'error' : ''}`}
                   />
                   {errors.country && <span className="error-message">{errors.country}</span>}
                 </div>
@@ -444,7 +444,7 @@ const Cart = forwardRef(({ cart, isOpen, onClose, onUpdateQuantity, onRemoveItem
                     name="sameAsBilling"
                     checked={formData.sameAsBilling}
                     onChange={handleInputChange}
-                    className="win98-checkbox"
+                    className="retro-checkbox"
                   />
                   Billing address is the same as shipping address
                 </label>
@@ -461,7 +461,7 @@ const Cart = forwardRef(({ cart, isOpen, onClose, onUpdateQuantity, onRemoveItem
                       name="billingAddress"
                       value={formData.billingAddress}
                       onChange={handleInputChange}
-                      className={`win98-input ${errors.billingAddress ? 'error' : ''}`}
+                      className={`retro-input ${errors.billingAddress ? 'error' : ''}`}
                     />
                     {errors.billingAddress && <span className="error-message">{errors.billingAddress}</span>}
                   </div>
@@ -474,7 +474,7 @@ const Cart = forwardRef(({ cart, isOpen, onClose, onUpdateQuantity, onRemoveItem
                         name="billingCity"
                         value={formData.billingCity}
                         onChange={handleInputChange}
-                        className={`win98-input ${errors.billingCity ? 'error' : ''}`}
+                        className={`retro-input ${errors.billingCity ? 'error' : ''}`}
                       />
                       {errors.billingCity && <span className="error-message">{errors.billingCity}</span>}
                     </div>
@@ -485,7 +485,7 @@ const Cart = forwardRef(({ cart, isOpen, onClose, onUpdateQuantity, onRemoveItem
                         name="billingState"
                         value={formData.billingState}
                         onChange={handleInputChange}
-                        className={`win98-input ${errors.billingState ? 'error' : ''}`}
+                        className={`retro-input ${errors.billingState ? 'error' : ''}`}
                       />
                       {errors.billingState && <span className="error-message">{errors.billingState}</span>}
                     </div>
@@ -499,7 +499,7 @@ const Cart = forwardRef(({ cart, isOpen, onClose, onUpdateQuantity, onRemoveItem
                         name="billingZipCode"
                         value={formData.billingZipCode}
                         onChange={handleInputChange}
-                        className={`win98-input ${errors.billingZipCode ? 'error' : ''}`}
+                        className={`retro-input ${errors.billingZipCode ? 'error' : ''}`}
                       />
                       {errors.billingZipCode && <span className="error-message">{errors.billingZipCode}</span>}
                     </div>
@@ -510,7 +510,7 @@ const Cart = forwardRef(({ cart, isOpen, onClose, onUpdateQuantity, onRemoveItem
                         name="billingCountry"
                         value={formData.billingCountry}
                         onChange={handleInputChange}
-                        className={`win98-input ${errors.billingCountry ? 'error' : ''}`}
+                        className={`retro-input ${errors.billingCountry ? 'error' : ''}`}
                       />
                       {errors.billingCountry && <span className="error-message">{errors.billingCountry}</span>}
                     </div>
@@ -526,7 +526,7 @@ const Cart = forwardRef(({ cart, isOpen, onClose, onUpdateQuantity, onRemoveItem
 
               {paymentStep === 'form' && (
                 <button 
-                  className={`win98-button win98-button-primary win98-button-large ${isFormValid() ? 'enabled' : 'disabled'}`}
+                  className={`retro-button retro-button-primary retro-button-large ${isFormValid() ? 'enabled' : 'disabled'}`}
                   onClick={handleCheckout}
                   disabled={!isFormValid()}
                 >
@@ -558,7 +558,7 @@ const Cart = forwardRef(({ cart, isOpen, onClose, onUpdateQuantity, onRemoveItem
 
                   {/* Card Payment Option */}
                   <button 
-                    className="win98-button win98-button-success win98-button-large"
+                    className="retro-button retro-button-success retro-button-large"
                     onClick={handlePaymentIntentCheckout}
                     disabled={!!clientSecret}
                   >

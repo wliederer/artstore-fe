@@ -41,7 +41,7 @@ const ProductModal = ({ product, quantity: initialQuantity, isOpen, onClose, onA
   return (
     <div className="modal-overlay" onClick={handleOverlayClick}>
       <div className="modal-content">
-        <button className="win98-button win98-close-button" onClick={onClose}>×</button>
+        <button className="retro-button retro-close-button" onClick={onClose}>×</button>
         
         <div className="modal-product">
           <div className="modal-image-container">
@@ -78,7 +78,7 @@ const ProductModal = ({ product, quantity: initialQuantity, isOpen, onClose, onA
                 <span className="quantity-label">Quantity:</span>
                 <div className="quantity-selector">
                   <button 
-                    className="win98-button win98-quantity-btn" 
+                    className="retro-button retro-quantity-btn" 
                     onClick={decreaseQuantity}
                     disabled={quantity <= 1}
                   >
@@ -88,12 +88,12 @@ const ProductModal = ({ product, quantity: initialQuantity, isOpen, onClose, onA
                     type="number" 
                     value={quantity} 
                     onChange={handleQuantityChange}
-                    className="win98-input win98-quantity-input"
+                    className="retro-input retro-quantity-input"
                     min="1"
                     max={product.stockQuantity || 999}
                   />
                   <button 
-                    className="win98-button win98-quantity-btn" 
+                    className="retro-button retro-quantity-btn" 
                     onClick={increaseQuantity}
                     disabled={quantity >= (product.stockQuantity || 999)}
                     style={{
@@ -105,7 +105,7 @@ const ProductModal = ({ product, quantity: initialQuantity, isOpen, onClose, onA
                 </div>
               </div>
               
-              <button className="win98-button win98-button-primary win98-button-large" onClick={handleAddToCart}>
+              <button className="retro-button retro-button-primary retro-button-large" onClick={handleAddToCart}>
                 ADD TO CART - ${(product.price * quantity).toFixed(2)}
               </button>
             </div>

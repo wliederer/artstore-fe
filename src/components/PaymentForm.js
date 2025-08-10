@@ -76,7 +76,7 @@ const PaymentForm = ({ clientSecret, orderId, onPaymentSuccess, onPaymentError, 
         <button 
           type="submit" 
           disabled={!stripe || isProcessing}
-          className={`win98-button win98-button-success win98-button-large ${isProcessing ? 'processing' : ''}`}
+          className={`retro-button retro-button-success retro-button-large ${isProcessing ? 'processing' : ''}`}
         >
           {isProcessing ? 'Processing...' : `Pay $${amount?.toFixed(2)}`}
         </button>

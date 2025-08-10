@@ -1,0 +1,354 @@
+/* Modern Retro Style - Inspired by Windows 98 but with Wada Sanzo colors */
+@import './wada-sanzo-palette.css';
+
+/* Base Retro Button Styles */
+.retro-button {
+  background: linear-gradient(135deg, var(--background-primary) 0%, var(--background-secondary) 100%);
+  border: 1px solid var(--border-medium);
+  border-top-color: var(--background-primary);
+  border-left-color: var(--background-primary);
+  border-right-color: var(--border-dark);
+  border-bottom-color: var(--border-dark);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+  transition: all 0.1s ease;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.retro-button:hover {
+  background: linear-gradient(135deg, var(--background-secondary) 0%, var(--background-tertiary) 100%);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+  border-color: var(--primary-color);
+}
+
+.retro-button:active,
+.retro-button.active {
+  background: linear-gradient(135deg, #d0d0d0 0%, #c0c0c0 100%);
+  border-top-color: #666;
+  border-left-color: #666;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+  transform: translateY(1px);
+}
+
+.retro-button:disabled {
+  color: #999;
+  cursor: not-allowed;
+  background: linear-gradient(135deg, #e0e0e0 0%, #d0d0d0 100%);
+  opacity: 0.6;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Primary Button (Dusty Rose theme) */
+.retro-button-primary {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  border-top-color: var(--primary-light);
+  border-left-color: var(--primary-light);
+  border-right-color: var(--primary-dark);
+  border-bottom-color: var(--primary-dark);
+  color: var(--text-inverse);
+  font-weight: 600;
+  box-shadow: var(--shadow-md);
+}
+
+.retro-button-primary:hover {
+  background: linear-gradient(135deg, var(--primary-hover) 0%, var(--primary-color) 100%);
+  box-shadow: var(--shadow-lg);
+}
+
+.retro-button-primary:active,
+.retro-button-primary.active {
+  background: linear-gradient(135deg, var(--primary-active) 0%, var(--primary-dark) 100%);
+  border-top-color: var(--primary-dark);
+  border-left-color: var(--primary-dark);
+  border-right-color: var(--primary-light);
+  border-bottom-color: var(--primary-light);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Large Button Variant */
+.retro-button-large {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 3px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.retro-button-large:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Success Button */
+.retro-button-success {
+  background: linear-gradient(135deg, var(--success-color) 0%, var(--secondary-color) 100%);
+  border-top-color: var(--success-light);
+  border-left-color: var(--success-light);
+  border-right-color: var(--secondary-dark);
+  border-bottom-color: var(--secondary-dark);
+  color: var(--text-inverse);
+  font-weight: 600;
+}
+
+.retro-button-success:hover {
+  background: linear-gradient(135deg, var(--success-light) 0%, var(--success-color) 100%);
+}
+
+.retro-button-success:active {
+  background: linear-gradient(135deg, var(--success-hover) 0%, var(--secondary-dark) 100%);
+  border-top-color: var(--secondary-dark);
+  border-left-color: var(--secondary-dark);
+  border-right-color: var(--success-light);
+  border-bottom-color: var(--success-light);
+}
+
+/* Warning Button */
+.retro-button-warning {
+  background: linear-gradient(135deg, var(--accent-color) 0%, var(--warning-color) 100%);
+  border-top-color: var(--warning-light);
+  border-left-color: var(--warning-light);
+  border-right-color: var(--accent-active);
+  border-bottom-color: var(--accent-active);
+  color: var(--text-inverse);
+  font-weight: 600;
+}
+
+.retro-button-warning:hover {
+  background: linear-gradient(135deg, var(--warning-light) 0%, var(--accent-hover) 100%);
+}
+
+.retro-button-warning:active {
+  background: linear-gradient(135deg, var(--accent-active) 0%, var(--warning-hover) 100%);
+  border-top-color: var(--accent-active);
+  border-left-color: var(--accent-active);
+  border-right-color: var(--warning-light);
+  border-bottom-color: var(--warning-light);
+}
+
+/* Input Fields - Modern but retro */
+.retro-input {
+  background: var(--background-primary);
+  border: 2px inset var(--border-light);
+  border-top-color: var(--border-medium);
+  border-left-color: var(--border-medium);
+  border-right-color: var(--background-primary);
+  border-bottom-color: var(--background-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-size: 14px;
+  color: var(--text-primary);
+  padding: 8px 12px;
+  outline: none;
+  transition: all 0.2s ease;
+  border-radius: 2px;
+}
+
+.retro-input:focus {
+  background: var(--background-primary);
+  border: 2px solid var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(196, 154, 154, 0.2);
+}
+
+.retro-input:disabled {
+  background: #f0f0f0;
+  color: #999;
+  cursor: not-allowed;
+}
+
+/* Select Dropdown */
+.retro-select {
+  background: #ffffff;
+  border: 2px inset #c0c0c0;
+  border-top-color: #999;
+  border-left-color: #999;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #333;
+  padding: 8px 32px 8px 12px;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  border-radius: 2px;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%23333333" d="M2 0L0 2h4zm0 5L0 3h4z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 12px;
+  transition: all 0.2s ease;
+}
+
+.retro-select:focus {
+  border: 2px solid #0078d4;
+  box-shadow: 0 0 0 2px rgba(0, 120, 212, 0.2);
+}
+
+/* Checkbox - More modern but retro feel */
+.retro-checkbox {
+  width: 18px;
+  height: 18px;
+  background: #ffffff;
+  border: 2px inset #c0c0c0;
+  border-top-color: #999;
+  border-left-color: #999;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+  appearance: none;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+
+.retro-checkbox:checked {
+  background: #0078d4;
+  border-color: #005a9e;
+}
+
+.retro-checkbox:checked::after {
+  content: '✓';
+  position: absolute;
+  top: 1px;
+  left: 3px;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.retro-checkbox:focus {
+  box-shadow: 0 0 0 2px rgba(0, 120, 212, 0.2);
+}
+
+/* Loading Button */
+.retro-button.loading {
+  color: #666;
+  pointer-events: none;
+}
+
+.retro-button.loading::after {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: 8px;
+  border: 2px solid #ccc;
+  border-top: 2px solid #666;
+  border-radius: 50%;
+  animation: retro-spin 1s linear infinite;
+}
+
+@keyframes retro-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Quantity Controls */
+.retro-quantity-btn {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+}
+
+.retro-quantity-input {
+  width: 60px;
+  height: 32px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 2px;
+}
+
+/* Form Groups */
+.retro-form-group {
+  margin-bottom: 16px;
+}
+
+.retro-form-group label {
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+/* Panel/Container */
+.retro-panel {
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+  border: 1px solid #ccc;
+  border-top-color: #fff;
+  border-left-color: #fff;
+  border-right-color: #999;
+  border-bottom-color: #999;
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Close Button (X) */
+.retro-close-button {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  color: #666;
+}
+
+.retro-close-button:hover {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+  color: white;
+  border-color: #cc4b4b;
+}
+
+/* Error States */
+.retro-input.error {
+  background: #ffeaea;
+  border-color: #d63031;
+  box-shadow: 0 0 0 2px rgba(214, 48, 49, 0.2);
+}
+
+.retro-error-message {
+  color: #d63031;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .retro-button-large {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  .retro-button {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}

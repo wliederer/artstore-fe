@@ -56,7 +56,7 @@ const PaymentSuccess = () => {
           <div className="error-icon">❌</div>
           <h2>Payment Verification Failed</h2>
           <p>{error}</p>
-          <button className="win98-button win98-button-primary" onClick={() => window.location.href = '/'}>Return to Store</button>
+          <button className="retro-button retro-button-primary" onClick={() => window.location.href = '/'}>Return to Store</button>
         </div>
       </div>
     );
@@ -91,14 +91,14 @@ const PaymentSuccess = () => {
 
         <div className="actions">
           <button 
-            className="win98-button win98-button-primary win98-button-large"
+            className="retro-button retro-button-primary retro-button-large"
             onClick={() => window.location.href = '/'}
           >
             Continue Shopping
           </button>
           {sessionData?.orderId && (
             <button 
-              className="win98-button win98-button-large"
+              className="retro-button retro-button-large"
               onClick={() => window.location.href = `/orders/${sessionData.orderId}`}
             >
               View Order Details

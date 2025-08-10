@@ -3,9 +3,12 @@ import ProductGrid from './components/ProductGrid';
 import ProductModal from './components/ProductModal';
 import Cart from './components/Cart';
 import PaymentSuccessModal from './components/PaymentSuccessModal';
+import InstagramIcon from './components/InstagramIcon';
+import ColorThemeSwitcher from './components/ColorThemeSwitcher';
 import apiService from './services/api';
 import './App.css';
-import './styles/windows98.css';
+import './styles/retro-modern.css';
+import './components/InstagramIcon.css';
 
 function App() {
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -171,7 +174,17 @@ function App() {
   return (
     <div className="App">
       <header className="header">
-        <h1 className="store-title">Free Sticker dot org</h1>
+        <div className="header-left">
+          <h1 className="store-title">Free Sticker dot org</h1>
+          <div className="header-social">
+            <ColorThemeSwitcher className="header-theme-switcher" />
+            <InstagramIcon 
+              size={28} 
+              href="https://instagram.com/total_willcall" 
+              className="header-instagram"
+            />
+          </div>
+        </div>
         {cartItemCount > 0 && (
           <div className="cart-indicator" onClick={handleCartClick}>
             <svg className="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -195,7 +208,7 @@ function App() {
               <h2>Oops! Something went wrong</h2>
               <p>{error}</p>
               <button 
-                className="win98-button win98-button-primary"
+                className="retro-button retro-button-primary"
                 onClick={() => window.location.reload()}
               >
                 Try Again

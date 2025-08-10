@@ -30,7 +30,7 @@ const CheckoutButton = ({ orderId, onCheckoutSuccess, onCheckoutError, disabled,
 
   return (
     <button 
-      className={`win98-button win98-button-primary win98-button-large ${isLoading ? 'loading' : ''}`}
+      className={`retro-button retro-button-primary retro-button-large ${isLoading ? 'loading' : ''}`}
       onClick={handleCheckout}
       disabled={disabled || isLoading}
     >

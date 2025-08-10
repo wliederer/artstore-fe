@@ -67,7 +67,7 @@ const ApiStatus = () => {
         <strong>API Status: {getStatusText()}</strong>
         <button 
           onClick={checkApiHealth}
-          className="win98-button"
+          className="retro-button"
           style={{
             padding: '2px 6px',
             fontSize: '10px',
